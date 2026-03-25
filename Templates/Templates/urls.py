@@ -20,5 +20,7 @@ from django.urls import path
 from captain import views
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('captain/',views.index)
+    path('captain/',views.index),
+    path('sum_of_two/<int:a>/<int:b>/',views.Sum_OF_TWO),
+    path('even_ornot/<int:H>/',views.Even_Or_Not)
 ]

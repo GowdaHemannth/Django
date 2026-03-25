@@ -18,8 +18,27 @@ def index(request):
         'Dhoni': 'MS Dhoni ".',
         "emp":{
             "ename":"Hemanth",
-            "sal":"50000"
+            "sal":50000
         }
     }
 
     return render(request, 'index.html', context)
+
+
+# Here we will be Seeing Howw To Take Input From he User
+
+def Sum_OF_TWO(request,a,b,):
+    context={
+        'a':a,
+        'b':b,
+        'c':a+b,
+        
+    }
+    return render(request,'sample2.html',context)
+
+
+def Even_Or_Not(request,H):
+    context={
+        'H':H
+    }
+    return render(request,'sample3.html',context)

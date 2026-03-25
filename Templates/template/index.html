@@ -136,8 +136,12 @@
     </p> -->
     {% load custom_filter %}
     <p>{{emp}}</p>
-      <p>{{emp.ename}}</p>
-    <p>{{emp.ename|vowels}}</p>
+      <p>{{emp.ename|upper}}</p>
+    <p>{{emp.sal|Divisible:2}}</p>
+     <p>{{emp.sal|Add:50000}}</p>
+     <!-- How To Pss multiple Argumenst -->
+        <p>{{emp.ename|Replace:'H,N'}}</p>
+      
   </body>
 </html>
 
