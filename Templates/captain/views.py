@@ -42,3 +42,16 @@ def Even_Or_Not(request,H):
         'H':H
     }
     return render(request,'sample3.html',context)
+
+#  Here we will Create The Function
+def Greater_Than_10(request,n):
+    context={
+        'n':n
+    }
+    return render(request,'sample4.html',context)
+
+def Even_Or_Odd(request,Number):
+    context={
+        'Number':Number
+    }
+    return render(request,'sample5.html',context)

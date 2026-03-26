@@ -32,7 +32,7 @@ def Replace(value,args):
             
 @register.filter
 def even(value):
-    if value%2==0:
-        return '{Yes it is EVEN}'
+    return len(str(value))
+       
   
               

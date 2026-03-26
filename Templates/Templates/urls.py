@@ -22,5 +22,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('captain/',views.index),
     path('sum_of_two/<int:a>/<int:b>/',views.Sum_OF_TWO),
-    path('even_ornot/<int:H>/',views.Even_Or_Not)
+    path('even_ornot/<int:H>/',views.Even_Or_Not),
+    path('Gretaer_Than_10/<str:n>/',views.Greater_Than_10),
+    path('CountDigits/<int:Number>/',views.Even_Or_Odd)
 ]

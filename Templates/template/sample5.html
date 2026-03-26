@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% load custom_filter %}
+     {% if Number|even %}
+    <h1>number is {{Number|even}}</h1>
+    {% else %}
+    <h2> not even</h2>
+    {% endif %}
+  </body>
+</html>
