@@ -33,6 +33,14 @@ def Replace(value,args):
 @register.filter
 def even(value):
     return len(str(value))
-       
-  
+@register.filter       
+def Leap(value):
+    if value%4==0:
+        if value%100==0:
+            if value%400==0:
+                return True
+        else:
+            return True         
+    else:
+        return False
               

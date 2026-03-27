@@ -44,7 +44,7 @@ def Even_Or_Not(request,H):
     return render(request,'sample3.html',context)
 
 #  Here we will Create The Function
-def Greater_Than_10(request,n):
+def Check_Upper(request,n):
     context={
         'n':n
     }
@@ -55,3 +55,37 @@ def Even_Or_Odd(request,Number):
         'Number':Number
     }
     return render(request,'sample5.html',context)
+
+def Leap_Year(request,n):
+    context={
+        'n':n
+    }
+    return render(request,'sample6.html',context)
+
+def Data(request):
+    Emp_Data=[
+        {
+          'empno':1234,
+          'ename':"Hemanth",
+          'job':'Clerk'  
+            },
+        {
+            
+          'empno':12345,
+          'ename':"Rakesh",
+          'job':'Manager' },
+        {
+            
+          'empno':123456,
+          'ename':"Chandru",
+          'job':'Developer' },
+        {
+            
+          'empno':1234567,
+          'ename':"Harish",
+          'job':'Tester' 
+        }
+    ]
+    context={'employees': Emp_Data}
+    return render(request,'Table.html',context)
+

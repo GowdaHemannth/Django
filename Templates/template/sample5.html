@@ -6,11 +6,12 @@
     <title>Document</title>
   </head>
   <body>
-    {% load custom_filter %}
-     {% if Number|even %}
+    {% load custom_filter %} {% if Number|even %}
     <h1>number is {{Number|even}}</h1>
     {% else %}
-    <h2> not even</h2>
+    <h2>not even</h2>
     {% endif %}
   </body>
 </html>
+
+<!-- Nested If  -->

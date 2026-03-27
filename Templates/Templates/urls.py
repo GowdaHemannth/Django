@@ -23,6 +23,8 @@ urlpatterns = [
     path('captain/',views.index),
     path('sum_of_two/<int:a>/<int:b>/',views.Sum_OF_TWO),
     path('even_ornot/<int:H>/',views.Even_Or_Not),
-    path('Gretaer_Than_10/<str:n>/',views.Greater_Than_10),
-    path('CountDigits/<int:Number>/',views.Even_Or_Odd)
+    path('Check_lowerCase/<str:n>/',views.Check_Upper),
+    path('CountDigits/<int:Number>/',views.Even_Or_Odd),
+    path('Leap_Year/<int:n>/',views.Leap_Year),
+    path("Table/",views.Data)
 ]
