@@ -89,3 +89,52 @@ def Data(request):
     context={'employees': Emp_Data}
     return render(request,'Table.html',context)
 
+file=open(r'C:\Users\Heman\OneDrive\Desktop\Django\Templates\captain','r')
+json_Data=file.read()
+file.close()
+import json
+py_data=json.loads(json_Data)
+
+def all_recipes(request):
+    context={
+        'recipes':py_data['recipes']
+    }
+    
+    return render(request,'recipes.html',context)
+
+
+
+# def one_Product(request, id):
+#     context = {
+#         'product': product[id-1]
+#     }
+
+# 👉 This is the key idea:
+
+# You already have:
+
+# product = [item1, item2, item3...]
+
+# Now user gives:
+
+# id = 1
+
+# You do:
+
+# product[id-1] → product[0]
+
+# 👉 That gives:
+
+# {"name": "Pizza"}
+
+# product = py_data['recipes']
+# means:
+
+# “Extract the list from the dictionary so I can use it easily.”
+
+product=py_data['recipes']
+def one_Product(request,id):
+    context={
+        'product':product[id-1]
+    }
+    return render(request,'one_Product',context)
